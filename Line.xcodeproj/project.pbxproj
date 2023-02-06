@@ -14,6 +14,11 @@
 		B3132C84298FB4B6007CF832 /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132C83298FB4B6007CF832 /* LineTests.swift */; };
 		B3132C8E298FB4B6007CF832 /* LineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132C8D298FB4B6007CF832 /* LineUITests.swift */; };
 		B3132C90298FB4B6007CF832 /* LineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132C8F298FB4B6007CF832 /* LineUITestsLaunchTests.swift */; };
+		B3132CA6298FB596007CF832 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132CA5298FB596007CF832 /* OnboardingView.swift */; };
+		B3132CA8298FB5A8007CF832 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132CA7298FB5A8007CF832 /* LoginView.swift */; };
+		B3132CAA298FB5C8007CF832 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132CA9298FB5C8007CF832 /* VerificationView.swift */; };
+		B3132CAC298FB5D9007CF832 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132CAB298FB5D9007CF832 /* HomeView.swift */; };
+		B3132CAE298FB601007CF832 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3132CAD298FB601007CF832 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		B3132C89298FB4B6007CF832 /* LineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3132C8D298FB4B6007CF832 /* LineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUITests.swift; sourceTree = "<group>"; };
 		B3132C8F298FB4B6007CF832 /* LineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3132CA5298FB596007CF832 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B3132CA7298FB5A8007CF832 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B3132CA9298FB5C8007CF832 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		B3132CAB298FB5D9007CF832 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B3132CAD298FB601007CF832 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 		B3132C71298FB4B5007CF832 /* Line */ = {
 			isa = PBXGroup;
 			children = (
+				B3132CA4298FB547007CF832 /* Views */,
 				B3132C72298FB4B5007CF832 /* LineApp.swift */,
 				B3132C74298FB4B5007CF832 /* ContentView.swift */,
 				B3132C76298FB4B6007CF832 /* Assets.xcassets */,
@@ -125,6 +136,18 @@
 				B3132C8F298FB4B6007CF832 /* LineUITestsLaunchTests.swift */,
 			);
 			path = LineUITests;
+			sourceTree = "<group>";
+		};
+		B3132CA4298FB547007CF832 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3132CA5298FB596007CF832 /* OnboardingView.swift */,
+				B3132CA7298FB5A8007CF832 /* LoginView.swift */,
+				B3132CA9298FB5C8007CF832 /* VerificationView.swift */,
+				B3132CAB298FB5D9007CF832 /* HomeView.swift */,
+				B3132CAD298FB601007CF832 /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3132CAE298FB601007CF832 /* SettingsView.swift in Sources */,
+				B3132CAA298FB5C8007CF832 /* VerificationView.swift in Sources */,
+				B3132CA6298FB596007CF832 /* OnboardingView.swift in Sources */,
 				B3132C75298FB4B5007CF832 /* ContentView.swift in Sources */,
+				B3132CAC298FB5D9007CF832 /* HomeView.swift in Sources */,
+				B3132CA8298FB5A8007CF832 /* LoginView.swift in Sources */,
 				B3132C73298FB4B5007CF832 /* LineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
