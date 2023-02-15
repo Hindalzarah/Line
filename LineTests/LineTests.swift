@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Line
+//@testable import Line
 
 final class LineTests: XCTestCase {
 
