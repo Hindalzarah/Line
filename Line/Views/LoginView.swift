@@ -96,20 +96,25 @@ struct LoginView: View {
                     TextField("966", text: $otpModel.code)
                         .keyboardType(.numberPad)
                         .multilineTextAlignment(.center)
-                    
+                   //     .frame(width: 200,height: 22)
+
                     Rectangle()
-                        .fill(otpModel.code == "" ? .gray.opacity(0.35) : .blue)
-                        .frame(width: 35, height: 2)
+                        .fill(otpModel.code == "" ? .black.opacity(0.35) : .blue)
+                        .frame(width: 40, height: 2)
                 }
                 .frame(width: 40)
                 VStack(spacing: 8){
                     TextField("  51 234 5678", text: $otpModel.number)
                         .keyboardType(.numberPad)
+                        .frame(width: 200,height: 22)
                     
                     Rectangle()
-                        .fill(otpModel.number == "" ? .gray.opacity(0.35) : .gray)
+                        .fill(otpModel.number == "" ? .black.opacity(0.35) : .gray)
                         .frame(width: 200, height: 2)
+                    
                 }
+
+                
             }
          //   .padding(.bottom,300)
             
@@ -120,10 +125,10 @@ struct LoginView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .padding(.vertical,12)
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: 255)
                     .background{
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(.blue)
+                            .fill(.purple)
                             .opacity(otpModel.isLoading ? 0 : 1)
                     }
                 

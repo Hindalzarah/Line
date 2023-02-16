@@ -32,6 +32,10 @@
 
 import SwiftUI
 import Firebase
+//import FirebaseCore
+//import FirebaseMessaging
+
+
 @main
 struct LineApp: App {
 
