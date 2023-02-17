@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+   
     @AppStorage("log_statuse") var log_statuse = false
     var body: some View {
         NavigationView{
@@ -18,10 +19,11 @@ struct ContentView: View {
             else{
                 LoginView()
             }
-    
+            
         }
     }
-}
+    
+    }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
