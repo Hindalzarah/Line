@@ -23,6 +23,7 @@
 		B35C19B3299C169300EC849A /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35C19B2299C169300EC849A /* SwiftUIView.swift */; };
 		B35C19BD299C957800EC849A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35C19BC299C957800EC849A /* GoogleService-Info.plist */; };
 		B35C19C0299C97B000EC849A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B35C19BF299C97B000EC849A /* FirebaseFirestore */; };
+		B35C19C4299E2E6D00EC849A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B35C19C3299E2E6D00EC849A /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35C19C4299E2E6D00EC849A /* FirebaseMessaging in Frameworks */,
 				B35C19AF299AD53B00EC849A /* FirebaseAuth in Frameworks */,
 				B35C19C0299C97B000EC849A /* FirebaseFirestore in Frameworks */,
 			);
@@ -199,6 +201,7 @@
 			packageProductDependencies = (
 				B35C19AE299AD53B00EC849A /* FirebaseAuth */,
 				B35C19BF299C97B000EC849A /* FirebaseFirestore */,
+				B35C19C3299E2E6D00EC849A /* FirebaseMessaging */,
 			);
 			productName = Line;
 			productReference = B3132C6F298FB4B5007CF832 /* Line.app */;
@@ -674,6 +677,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B35C19AD299AD53B00EC849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		B35C19C3299E2E6D00EC849A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35C19AD299AD53B00EC849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
