@@ -10,6 +10,10 @@ import SwiftUI
 struct Fpage: View {
     var body: some View {
         
+        NavigationView{
+            NavigationLink("hellow", destination: CVSystem())
+        }
+        
         GroupBox() {
             ZStack{
                 
