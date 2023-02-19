@@ -80,65 +80,84 @@
 
 
 import SwiftUI
-
+import Firebase
 struct LoginView: View {
     @StateObject var otpModel: OTPViewModel = .init()
     var body: some View {
-        VStack{
-            Spacer()
-            VStack(){
-                Text("Please Enter your mobile number ")
-            }.padding(.bottom,80)
-                .foregroundColor(.black)
-
-            HStack(spacing: 10){
-                VStack(spacing: 8){
-                    TextField("966", text: $otpModel.code)
-                        .keyboardType(.numberPad)
-                        .multilineTextAlignment(.center)
-                   //     .frame(width: 200,height: 22)
-
-                    Rectangle()
-                        .fill(otpModel.code == "" ? .black.opacity(0.35) : .blue)
-                        .frame(width: 40, height: 2)
-                }
-                .frame(width: 40)
-                VStack(spacing: 8){
-                    TextField("  51 234 5678", text: $otpModel.number)
-                        .keyboardType(.numberPad)
-                        .frame(width: 200,height: 22)
+        ZStack{
+            VStack{
+                Spacer()
+                VStack(){
+                    Text("Please Enter your mobile number ")
+                }.padding(.bottom,80)
+                    .foregroundColor(.black)
+                
+                HStack(spacing: 10){
+                    VStack(spacing: 8){
+                        TextField("966", text: $otpModel.code)
+                            .keyboardType(.numberPad)
+                            .multilineTextAlignment(.center)
+                        let userToken = UserDefaults.standard.string(forKey: "TokenUser")
+                        // Token for Notifications
+                        // UUid : User from Auth
+                        
+                        //     .frame(width: 200,height: 22)
+                        
+                        Rectangle()
+                            .fill(otpModel.code == "" ? .black.opacity(0.35) : .blue)
+                            .frame(width: 40, height: 2)
+                    }
+                    .frame(width: 40)
+                    VStack(spacing: 8){
+                        TextField("  51 234 5678", text: $otpModel.number)
+                            .keyboardType(.numberPad)
+                            .frame(width: 200,height: 22)
+                        
+                        Rectangle()
+                            .fill(otpModel.number == "" ? .black.opacity(0.35) : .gray)
+                            .frame(width: 200, height: 2)
+                        
+                    }
                     
-                    Rectangle()
-                        .fill(otpModel.number == "" ? .black.opacity(0.35) : .gray)
-                        .frame(width: 200, height: 2)
                     
                 }
-
+                //   .padding(.bottom,300)
+                
+                Button{
+                    Task{await otpModel.sendOTP()}
+                } label: {
+                    Text("Login")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding(.vertical,12)
+                      //  .frame(minWidth: 140,minHeight: 44)
+                        .frame(maxWidth: 255)
+                        .background{
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(Color("Bluee"))
+                                .opacity(otpModel.isLoading ? 0 : 1)
+                        }
+                    
+                        .overlay{
+                            ProgressView()
+                                .opacity(otpModel.isLoading ? 1 : 0)
+                        }
+                }
+                .disabled(otpModel.code == "" || otpModel.number == "" )
+                .opacity(otpModel.code == "" || otpModel.number == "" ? 0.4 : 1)
+            }
+            ZStack{
+                Circle( )
+                .frame (width: 400, height: 400) .offset(x: 150, y: 630)
+                .foregroundColor (Color("Bluee").opacity (0.5))
                 
             }
-         //   .padding(.bottom,300)
-            
-            Button{
-                Task{await otpModel.sendOTP()}
-            } label: {
-                Text("Login")
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding(.vertical,12)
-                    .frame(maxWidth: 255)
-                    .background{
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(.purple)
-                            .opacity(otpModel.isLoading ? 0 : 1)
-                    }
+            ZStack{
+                Circle( )
+                .frame (width: 650, height: 400) .offset(x: -100, y: 560)
+                .foregroundColor (Color("Bluee").opacity (0.3))
                 
-                    .overlay{
-                        ProgressView()
-                            .opacity(otpModel.isLoading ? 1 : 0)
-                    }
             }
-            .disabled(otpModel.code == "" || otpModel.number == "" )
-                        .opacity(otpModel.code == "" || otpModel.number == "" ? 0.4 : 1)
         }
         .padding(.bottom,300)
 

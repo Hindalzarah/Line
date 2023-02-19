@@ -460,6 +460,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
                      deviceToken: Data) {
         let deviveTokenString = deviceToken.hexString
         print (deviveTokenString)
+        UserDefaults.standard.set(deviveTokenString, forKey: "TokenUser")
+//        let userToken = UserDefaults.standard.string(forKey: "TokenUser")
     }
     //________________________________________________________
 
@@ -470,6 +472,7 @@ extension AppDelegate: MessagingDelegate{
       //  print("Firebase registration token: \(String(describing: fcmToken))")
         let dataDict:[String: String] = ["token": fcmToken ?? ""]
         print (dataDict)
+        
   //  NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
     // TODO: If necessary send token to application server.
     // Note: This callback is fired at each app startup and whenever a new token is generated.
