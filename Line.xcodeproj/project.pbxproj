@@ -31,6 +31,8 @@
 		B35C19BD299C957800EC849A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35C19BC299C957800EC849A /* GoogleService-Info.plist */; };
 		B35C19C0299C97B000EC849A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B35C19BF299C97B000EC849A /* FirebaseFirestore */; };
 		B35C19C4299E2E6D00EC849A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B35C19C3299E2E6D00EC849A /* FirebaseMessaging */; };
+		B3EB209B29A382A600DFBD51 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B3EB209A29A382A600DFBD51 /* FirebaseFirestoreSwift */; };
+		B3EB209D29A3877100DFBD51 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EB209C29A3877100DFBD51 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 		B35C19B2299C169300EC849A /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		B35C19B4299C22AE00EC849A /* Line.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Line.entitlements; sourceTree = "<group>"; };
 		B35C19BC299C957800EC849A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3EB209C29A3877100DFBD51 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EB209B29A382A600DFBD51 /* FirebaseFirestoreSwift in Frameworks */,
 				B35C19C4299E2E6D00EC849A /* FirebaseMessaging in Frameworks */,
 				677688D829A0CCD9005838FA /* FirebaseStorage in Frameworks */,
 				B35C19AF299AD53B00EC849A /* FirebaseAuth in Frameworks */,
@@ -191,6 +195,7 @@
 				B3132CA7298FB5A8007CF832 /* LoginView.swift */,
 				B3132CA9298FB5C8007CF832 /* VerificationView.swift */,
 				B3132CAD298FB601007CF832 /* SettingsView.swift */,
+				B3EB209C29A3877100DFBD51 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				B35C19BF299C97B000EC849A /* FirebaseFirestore */,
 				B35C19C3299E2E6D00EC849A /* FirebaseMessaging */,
 				677688D729A0CCD9005838FA /* FirebaseStorage */,
+				B3EB209A29A382A600DFBD51 /* FirebaseFirestoreSwift */,
 			);
 			productName = Line;
 			productReference = B3132C6F298FB4B5007CF832 /* Line.app */;
@@ -353,6 +359,7 @@
 				B3132CAE298FB601007CF832 /* SettingsView.swift in Sources */,
 				B3132CAA298FB5C8007CF832 /* VerificationView.swift in Sources */,
 				677688D0299FD56C005838FA /* SRegistration.swift in Sources */,
+				B3EB209D29A3877100DFBD51 /* HomeView.swift in Sources */,
 				B35C19B3299C169300EC849A /* SwiftUIView.swift in Sources */,
 				B3132CA6298FB596007CF832 /* OnboardingView.swift in Sources */,
 				677688CC299FD0C2005838FA /* photopicer.swift in Sources */,
@@ -523,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Line/Preview Content\"";
-				DEVELOPMENT_TEAM = W2GL24RTXK;
+				DEVELOPMENT_TEAM = 36WNX5K66Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Line/Info.plist;
@@ -556,7 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Line/Preview Content\"";
-				DEVELOPMENT_TEAM = W2GL24RTXK;
+				DEVELOPMENT_TEAM = 36WNX5K66Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Line/Info.plist;
@@ -724,6 +731,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B35C19AD299AD53B00EC849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		B3EB209A29A382A600DFBD51 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B35C19AD299AD53B00EC849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

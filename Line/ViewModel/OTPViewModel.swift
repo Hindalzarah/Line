@@ -109,10 +109,11 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestoreSwift
 
 class OTPViewModel: ObservableObject {
     // MARK: Login Data
-    @Published var number: String = ""
+    @Published var phoneNumber: String = ""
     @Published var code: String = ""
     
     @Published var otpText: String = ""
@@ -142,7 +143,7 @@ class OTPViewModel: ObservableObject {
          //   otpText = otpFields.joined(separator: "")
     
             let result = try await
-            PhoneAuthProvider.provider().verifyPhoneNumber("+\(code)\(number)",
+            PhoneAuthProvider.provider().verifyPhoneNumber("+\(code)\(phoneNumber)",
             uiDelegate: nil)
             print(result)
             DispatchQueue.main.async {
@@ -161,7 +162,13 @@ class OTPViewModel: ObservableObject {
     self.otpText = self.otpFields.joined(separator: "")//print the array as string
     self.isLoading = true
     let credential = PhoneAuthProvider.provider().credential(withVerificationID: self.verificationCode, verificationCode: self.otpText)
-    let _ = try await Auth.auth().signIn(with: credential)
+        Auth.auth().signIn(with: credential){(authResult, error) in
+            //  debugPrint(error)
+            // debugPrint(authResult)
+            
+            let id = authResult?.user.uid
+            Firestore.firestore().collection("users").document().setData(["id":id,"phonenumber": authResult?.user.phoneNumber])
+        }
     DispatchQueue.main.async {[self] in
     self.isLoading = false
         self.log_status = true

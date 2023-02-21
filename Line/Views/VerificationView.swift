@@ -163,45 +163,78 @@ struct VerificationView: View {
     // MARK: TextField FocusState
     @FocusState var activeField: OTPField?
     var body: some View {
-        VStack{
-            OTPField()
-            Button{
-                Task{await otpModel.verifyOTP()}
-//                Task{await otpModel.sendOTP()}
-                if (otpModel.log_status == true){
-                    NavigationLink(tag: "SwiftUIView", selection: $otpModel.navigationTag){
-                        SwiftUIView()
-
-                    } label: {}
-             
+        ZStack{
+            VStack{
+                VStack(spacing: 20){
+                //    Spacer()
+                    Text("OTP Verification")
+                        .font(.title2).bold()
+                    Text("we will send you OTP code to verify your identity")
+                        .font(.system(size: 15))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 50)
+                        .padding(.bottom)
+                    
                 }
-            } label: {
+                .padding(.top,200)
                 
-                Text("Verify")
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding(.vertical,12)
-                    .frame(maxWidth: .infinity)
-                    .background{
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(.blue)
+                Spacer()
+                OTPField()
+                Button{
+                    Task{await otpModel.verifyOTP()}
+                    //                Task{await otpModel.sendOTP()}
+                    if (otpModel.log_status == true){
+                        NavigationLink(tag: "SwiftUIView", selection: $otpModel.navigationTag){
+                            SwiftUIView()
+                            
+                        } label: {}
+                        
                     }
-            }
-            .disabled(checkStatus())
-            .opacity(checkStatus() ? 0.4 : 1)
-            .padding(.vertical)
-            
-            HStack(spacing: 12){
-                Text("Didn't get otp?")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                Button("Resend"){
-                    Task{await otpModel.sendOTP()}
+                } label: {
+                    
+                    Text("Verify")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding(.vertical,12)
+                        .frame(maxWidth: 255)
+                        .background{
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(Color("Bluee"))
+                        }
                 }
+                .disabled(checkStatus())
+                .opacity(checkStatus() ? 0.4 : 1)
+                .padding(.vertical)
+                
+                HStack(spacing: 12){
+                    Text("Didn't get otp?")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    Button("Resend"){
+                        Task{await otpModel.sendOTP()}
+                    }
                     .font(.callout)
+                }
+               // .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            ZStack{
+                Circle( )
+                .frame (width: 400, height: 400) .offset(x: 150, y: 630)
+                .foregroundColor (Color("Bluee").opacity (0.5))
+                
+            }
+            ZStack{
+                Circle( )
+                .frame (width: 650, height: 400) .offset(x: -100, y: 560)
+                .foregroundColor (Color("Bluee").opacity (0.3))
+                
+            }
+
+            
         }
+         .padding(.bottom,300)
+
 //        .background{
 //                            if (otpModel.log_status == true){
 //                                NavigationLink(tag: "SwiftUIView", selection: $otpModel.navigationTag){

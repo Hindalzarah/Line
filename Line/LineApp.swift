@@ -402,8 +402,9 @@
 
 import SwiftUI
 import Firebase
-//import FirebaseCore
+import FirebaseAuth
 import FirebaseMessaging
+import UserNotificationsUI
 @main
 struct LineApp: App {
 
@@ -465,6 +466,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     }
     //________________________________________________________
 
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        if Auth.auth().canHandle(url) {
+            return true
+        }
+        return false
+    }
     
 }
 extension AppDelegate: MessagingDelegate{

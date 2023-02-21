@@ -17,7 +17,7 @@ struct ContentView: View {
                     .navigationTitle("Home")
             }
             else{
-                CVSystem()
+                LoginView()
             }
             
         }
