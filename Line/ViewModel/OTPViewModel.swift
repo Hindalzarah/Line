@@ -166,6 +166,8 @@ class OTPViewModel: ObservableObject {
             //  debugPrint(error)
             // debugPrint(authResult)
             
+            let userToken = UserDefaults.standard.string(forKey: "TokenUser")
+
             let id = authResult?.user.uid
             Firestore.firestore().collection("users").document().setData(["id":id,"phonenumber": authResult?.user.phoneNumber])
         }

@@ -183,14 +183,13 @@ struct VerificationView: View {
                 OTPField()
                 Button{
                     Task{await otpModel.verifyOTP()}
-                    //                Task{await otpModel.sendOTP()}
-                    if (otpModel.log_status == true){
-                        NavigationLink(tag: "SwiftUIView", selection: $otpModel.navigationTag){
-                            SwiftUIView()
-                            
-                        } label: {}
-                        
-                    }
+//                    if (otpModel.log_status == true){
+//                        NavigationLink(tag: "SwiftUIView", selection: $otpModel.navigationTag){
+//                            SwiftUIView()
+//
+//                        } label: {}
+//
+//                    }
                 } label: {
                     
                     Text("Verify")
@@ -202,7 +201,41 @@ struct VerificationView: View {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .fill(Color("Bluee"))
                         }
+                } .overlay{
+                    //loading before oppening the CAPTCHA
+                    ProgressView()
+                        .opacity(otpModel.isLoading ? 1 : 0)
+                    //the navigation button will appear when the virification code is sent
+                    
+                    if (otpModel.log_status){
+                        NavigationLink(tag: "SwiftUIView", selection: $otpModel.navigationTag){
+                            SwiftUIView()
+                      
+                                              }
+                                        label:{
+                            Text("Login")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding(.vertical,12)
+                            .frame(maxWidth: 255)
+                                .background{
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(Color("Bluee"))
+                                                }
+
+                        }
+                        
+                    }
                 }
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 .disabled(checkStatus())
                 .opacity(checkStatus() ? 0.4 : 1)
                 .padding(.vertical)
