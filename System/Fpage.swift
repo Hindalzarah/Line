@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Fpage: View {
     var body: some View {

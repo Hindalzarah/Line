@@ -9,6 +9,8 @@
 
 
 import SwiftUI
+import Firebase
+
 enum Status: Int, Hashable, CaseIterable, Identifiable, Comparable{
     
     
@@ -110,20 +112,6 @@ struct orders: View {
                     }
                     
                 }
-                
-//                Button(action: {self.orderstatus.toggle() }) {
-//                    Text("Ready")
-//
-//                        .padding()
-//                        .foregroundColor(.white)
-//
-//
-//
-//                        .background(RoundedRectangle(cornerRadius: 8)
-//                            .fill(Color.green)
-//                        .frame(width: 100, height: 30))
-//
-//                }
             }
             
             HStack{
@@ -185,7 +173,6 @@ struct orders: View {
             
         }//NAVSTACK
         .searchable(text: $searchText)
-        
         
     }
 }

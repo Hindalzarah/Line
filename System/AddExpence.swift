@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct AddExpence: View {
     
@@ -36,6 +37,8 @@ struct AddExpence: View {
                 let expense = Expenses (orderN: Int(orderNum) ?? 0, phoneN: Int(phoneNum) ?? 0, Status: status)
                     expenses.exampleData.append (expense)
                 dismiss()
+//                self.addinfo(orderN: self.orderNum, phoneN: self.phoneNum, status: self.status )
+                
             }, label:{
                 Label("Save Expense", systemImage: "externaldrive")
                     .frame (maxWidth: .infinity)
@@ -43,6 +46,12 @@ struct AddExpence: View {
             .buttonStyle (.borderedProminent)
         }
     }
+    
+    
+//    func addinfo(orderN:Int , phoneN:Int , status:Bool){
+//        let db = Firestore.firestore()
+//        db.collection("Orders").document().setData(["OrderNumber":orderN, "PhoneNumber" : phoneN , "Status" : status])
+//    }
 }
 
 

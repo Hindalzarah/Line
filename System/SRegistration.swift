@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 struct SRegistration: View {
     @State var CName = ""
     @State var CEmail = ""

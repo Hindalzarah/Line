@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ThankU: View {
         @State var isActive:Bool = false
