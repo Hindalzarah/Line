@@ -182,6 +182,7 @@ struct Home: View{
        }
        task.resume()
     }
+   
 }
 
 

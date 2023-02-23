@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2603F25329A77A54007A9950 /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2603F25229A77A54007A9950 /* setting.swift */; };
+		2603F25529A77AC9007A9950 /* AddExpence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2603F25429A77AC9007A9950 /* AddExpence.swift */; };
+		2603F25729A782F8007A9950 /* func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2603F25629A782F8007A9950 /* func.swift */; };
 		677688CA299FCFC3005838FA /* ThankU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677688C9299FCFC3005838FA /* ThankU.swift */; };
 		677688CC299FD0C2005838FA /* photopicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677688CB299FD0C2005838FA /* photopicer.swift */; };
 		677688D0299FD56C005838FA /* SRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677688CF299FD56C005838FA /* SRegistration.swift */; };
@@ -53,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2603F25229A77A54007A9950 /* setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
+		2603F25429A77AC9007A9950 /* AddExpence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpence.swift; sourceTree = "<group>"; };
+		2603F25629A782F8007A9950 /* func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = func.swift; sourceTree = "<group>"; };
 		677688C9299FCFC3005838FA /* ThankU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankU.swift; sourceTree = "<group>"; };
 		677688CB299FD0C2005838FA /* photopicer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photopicer.swift; sourceTree = "<group>"; };
 		677688CF299FD56C005838FA /* SRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRegistration.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 				677688CF299FD56C005838FA /* SRegistration.swift */,
 				677688D3299FDC32005838FA /* CVSystem.swift */,
 				677688D1299FD65F005838FA /* orders.swift */,
+				2603F25229A77A54007A9950 /* setting.swift */,
+				2603F25429A77AC9007A9950 /* AddExpence.swift */,
+				2603F25629A782F8007A9950 /* func.swift */,
 				677688D5299FE099005838FA /* Fpage.swift */,
 			);
 			path = System;
@@ -361,7 +370,9 @@
 				677688D0299FD56C005838FA /* SRegistration.swift in Sources */,
 				B3EB209D29A3877100DFBD51 /* HomeView.swift in Sources */,
 				B35C19B3299C169300EC849A /* SwiftUIView.swift in Sources */,
+				2603F25729A782F8007A9950 /* func.swift in Sources */,
 				B3132CA6298FB596007CF832 /* OnboardingView.swift in Sources */,
+				2603F25329A77A54007A9950 /* setting.swift in Sources */,
 				677688CC299FD0C2005838FA /* photopicer.swift in Sources */,
 				B3132C75298FB4B5007CF832 /* ContentView.swift in Sources */,
 				B35C19A9299AB88B00EC849A /* OTPViewModel.swift in Sources */,
@@ -371,6 +382,7 @@
 				677688D6299FE099005838FA /* Fpage.swift in Sources */,
 				677688D4299FDC32005838FA /* CVSystem.swift in Sources */,
 				B3132C73298FB4B5007CF832 /* LineApp.swift in Sources */,
+				2603F25529A77AC9007A9950 /* AddExpence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
