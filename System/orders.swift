@@ -85,7 +85,11 @@ struct orders: View {
                         NavigationLink(
                             destination: Home().navigationBarHidden(true), label: {
                                 
-                        Text("Ready")
+                                Button(action: {
+                             
+                                                            }, label: {
+                                                                Home()
+                                                            })
 
                             .padding()
                             .foregroundColor(.white)

@@ -154,7 +154,9 @@ struct Home: View{
                 let userToken = UserDefaults.standard.string(forKey: "TokenUser")
                 self.sendPushNotification(to: userToken ?? "", title: "You got a new meassage.", message: "This message is sent for you")
             }){
-                Text("send notification")
+            //    Text("send notification")
+                Text("Ready")
+
             }
         }
     }
