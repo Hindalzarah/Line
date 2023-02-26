@@ -35,6 +35,8 @@
 		B35C19C4299E2E6D00EC849A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B35C19C3299E2E6D00EC849A /* FirebaseMessaging */; };
 		B3EB209B29A382A600DFBD51 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B3EB209A29A382A600DFBD51 /* FirebaseFirestoreSwift */; };
 		B3EB209D29A3877100DFBD51 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EB209C29A3877100DFBD51 /* HomeView.swift */; };
+		C06DC7F329AA05DD004833EF /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DC7F229AA05DD004833EF /* HomePage.swift */; };
+		C06DC7F529AA068D004833EF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DC7F429AA068D004833EF /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B35C19B4299C22AE00EC849A /* Line.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Line.entitlements; sourceTree = "<group>"; };
 		B35C19BC299C957800EC849A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3EB209C29A3877100DFBD51 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C06DC7F229AA05DD004833EF /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		C06DC7F429AA068D004833EF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				B3132CA9298FB5C8007CF832 /* VerificationView.swift */,
 				B3132CAD298FB601007CF832 /* SettingsView.swift */,
 				B3EB209C29A3877100DFBD51 /* HomeView.swift */,
+				C06DC7F229AA05DD004833EF /* HomePage.swift */,
+				C06DC7F429AA068D004833EF /* Settings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3132CAE298FB601007CF832 /* SettingsView.swift in Sources */,
+				C06DC7F329AA05DD004833EF /* HomePage.swift in Sources */,
 				B3132CAA298FB5C8007CF832 /* VerificationView.swift in Sources */,
 				677688D0299FD56C005838FA /* SRegistration.swift in Sources */,
 				B3EB209D29A3877100DFBD51 /* HomeView.swift in Sources */,
@@ -379,6 +386,7 @@
 				677688D4299FDC32005838FA /* CVSystem.swift in Sources */,
 				B3132C73298FB4B5007CF832 /* LineApp.swift in Sources */,
 				2603F25529A77AC9007A9950 /* AddExpence.swift in Sources */,
+				C06DC7F529AA068D004833EF /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
